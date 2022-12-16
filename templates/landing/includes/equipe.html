@@ -1,0 +1,49 @@
+<section id="equipe" class="our-team pad-t-b-130 padding-bottom-80">
+    <div class="container">
+
+        <!-- Heading -->
+        <div class="heading-block margin-bottom-30">
+            <h3>{{ about_team.title }}</h3>
+            <hr>
+        </div>
+        <div class="intro-small col-md-8 center-auto">
+            <p>{{ about_team.text }}</p>
+        </div>
+
+        <!-- Team  -->
+        <div class="team-part">
+            <div class="row">
+
+                <!-- Team Member -->
+                {% for it in team %}
+                    <div class="col-sm-4">
+                        <article>
+                            <!-- Team Img -->
+                            <div class="team-img animate"><img class="img-responsive" src="{{ it.photo.url }}" alt="">
+
+                                <!-- Social -->
+                                {% if it.instagram_link or it.linkedin_link %}
+                                    <div class="team-hover">
+                                        <div class="position-center-center">
+                                            {% if it.instagram_link %}
+                                                <a href="{{ it.instagram_link }}"><i class="fa fa-instagram"></i></a>
+                                            {% endif %}
+                                            {% if it.linkedin_link %}
+                                                <a href="{{ it.linkedin_link }}"><i class="fa fa-linkedin"></i></a>
+                                            {% endif %}
+                                        </div>
+                                    </div>
+                                {% endif %}
+
+                                <!-- Team Name -->
+                                <div class="team-name">
+                                    <h6>{{ it.name }}</h6>
+                                    <p>{{ it.position }}</p>
+                                </div>
+                        </article>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>

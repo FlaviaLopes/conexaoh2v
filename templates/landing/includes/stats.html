@@ -1,0 +1,9 @@
+<div class="counters nolist-style">
+    <ul class="row">
+        {% for it in stats %}
+            <li class="col-sm-3"><span class="counter">{{ it.value }}</span> <span>{{ it.unit }}</span>
+                <p>{{ it.title }}</p>
+            </li>
+        {% endfor %}
+    </ul>
+</div>

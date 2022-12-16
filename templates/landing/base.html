@@ -1,0 +1,68 @@
+{% include 'landing/includes/head.html' %}
+
+<body>
+
+<!-- LOADER -->
+<div id="loader">
+    <div class="position-center-center">
+        <div class="loader"></div>
+    </div>
+</div>
+
+<!-- Page Wrapper -->
+<div id="wrap">
+    {% include 'landing/includes/header.html' %}
+
+    <!-- Content -->
+    <div id="content">
+
+        {% include 'landing/includes/quem-somos.html' %}
+
+        <!-- Counter -->
+        {% include 'landing/includes/stats.html' %}
+
+        <!-- OUR SERVICES -->
+        {% include 'landing/includes/nossa-solucao.html' %}
+
+        <!-- Portfolio -->
+{#        {% include 'landing/includes/portfolio.html' %}#}
+
+        <!-- Tesm Text -->
+        {% include 'landing/includes/faca-parte.html' %}
+
+        <!-- OUR TEAM -->
+        {% include 'landing/includes/equipe.html' %}
+
+        <!-- Clients -->
+{#        {% include 'landing/includes/depoimentos.html' %}#}
+
+        <!-- OUR Posts -->
+        {% include 'landing/includes/posts.html' %}
+
+        <!-- OUR partners -->
+        {% include 'landing/includes/parceiros.html' %}
+    </div>
+    <!-- End Content -->
+    {% include 'landing/includes/footer.html' %}
+
+    <!-- GO TO TOP  -->
+    <a href="#" class="cd-top"><i class="fa fa-angle-up"></i></a>
+    <!-- GO TO TOP End -->
+</div>
+<!-- End Page Wrapper -->
+{% load static %}
+<!-- JavaScripts -->
+<script src="{% static 'js/vendors/jquery/jquery.min.js' %}"></script>
+<script src="{% static 'js/vendors/wow.min.js' %}"></script>
+<script src="{% static 'js/vendors/bootstrap.min.js' %}"></script>
+<script src="{% static 'js/vendors/jquery.magnific-popup.min.js' %}"></script>
+<script src="{% static 'js/vendors/own-menu.js' %}"></script>
+<script src="{% static 'js/vendors/jquery.sticky.js' %}"></script>
+<script src="{% static 'js/vendors/owl.carousel.min.js' %}"></script>
+
+<!-- SLIDER REVOLUTION 4.x SCRIPTS  -->
+<script type="text/javascript" src="{% static 'rs-plugin/js/jquery.tp.t.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'rs-plugin/js/jquery.tp.min.js' %}"></script>
+<script src="{% static 'js/main.js' %}"></script>
+</body>
+</html>

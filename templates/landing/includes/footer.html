@@ -1,0 +1,43 @@
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="foot-up">
+            <div class="row">
+                <div class="col-sm-3 padding-right-50"><img class="foot-logo" src="{{ footer.logo.url }}" alt=""></div>
+                <div class="col-sm-9">
+                    <div class="pos-info">
+                        <ul class="row">
+                            <li class="col-sm-4"><i class="flaticon-route"></i>
+                                <h6>Endereço Postal</h6>
+                                <p>{{ footer.postal_address }}</p>
+                            </li>
+                            <li class="col-sm-4"><i class="flaticon-mail"></i>
+                                <h6>E-mail</h6>
+                                <a href="mailto:{{ footer.email }}">{{ footer.email }}</a>
+                            </li>
+                            <li class="col-sm-4"><i class="flaticon-smartphone"></i>
+                                <h6>Telefone</h6>
+                                <a href="tel:{{ footer.phone }}">{{ footer.phone|phone2numeric }}</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="foot-down">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 text-left">
+                    <p>{{ current_year }} © [plataforma name]. Todos os direitos reservados.</p>
+                </div>
+                <div class="col-sm-6">
+                    {% for it in social %}
+                        <a href="{{ social.network_link }}"><i class="fa fa-{{ social.network_name }}"></i></a>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+

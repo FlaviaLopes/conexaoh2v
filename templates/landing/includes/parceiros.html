@@ -1,0 +1,18 @@
+<section id="parceiros" class="client-sec">
+    <div class="container">
+
+        <!-- Heading -->
+        <div class="heading-block margin-bottom-30">
+            <h3>{{ about_partner.title }}</h3>
+            <hr>
+        </div>
+        <div class="intro-small col-md-8 center-auto">
+            <p>{{ about_partner.text }}</p>
+        </div>
+        <ul class="nolist-style">
+            {% for it in partners %}
+                <li><img src="{{ it.logo.url }}" alt=""></li>
+            {% endfor %}
+        </ul>
+    </div>
+</section>

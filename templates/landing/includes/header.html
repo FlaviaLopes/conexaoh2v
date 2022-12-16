@@ -1,0 +1,128 @@
+<!-- Nav -->
+<div class="fly-nav in-cet">
+    <nav class="overlay" id="overlay">
+        <div class="position-center-center">
+            <div class="container">
+                <ul>
+                    <li><a data-toggle="collapse" data-parent="#accordion" href="#one">Home <i
+                            class="fa fa-angle-right"></i></a>
+                        <div id="one" class="panel-collapse collapse" role="tabpanel">
+                            <ul>
+                                <li><a href="#quem-somos">Quem Somos</a></li>
+                                <li><a href="#nossa-solucao">Nossa Solução</a></li>
+                                <li><a href="#faca-parte">Faça Parte</a></li>
+                                <li><a href="#equipe">Equipe</a></li>
+                                <li><a href="#posts">Últimas Postagens</a></li>
+                                <li><a href="#parceiros">Parceiros</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="#">Blog </a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Bottom Info -->
+        <div class="botton-info">
+            <div class="container">
+                <div class="col-sm-6 text-left">
+                    <p>{{ current_year }} © [plataforma name]. Todos os direitos reservados.</p>
+                </div>
+                <div class="col-sm-6 text-right">
+                    {% for it in social %}
+                        <a href="{{ social.network_link }}"><i class="fa fa-{{ social.network_name }}"></i></a>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </nav>
+</div>
+
+<!-- Header Icon -->
+<div class="fly-nac-icon">
+    <div class="position-center-center">
+        <div class="toggle-button" id="toggle">
+            <span class="bar top"></span>
+            <span class="bar middle"></span>
+            <span class="bar bottom"></span>
+        </div>
+    </div>
+</div>
+
+<!-- Logo -->
+<div class="logo logo-fly">
+    <a href="{{ tags.og_url }}"><img src="{{ header.logo.url }}" alt=""></a>
+</div>
+<!-- End logo -->
+
+<!-- Slider -->
+<section class="home-slider full-height">
+    <div class="tp-banner-container">
+        <div class="tp-banner-full">
+            <ul>
+                {% for it in sliders %}
+                    <li data-transition="random" data-slotamount="7" data-masterspeed="300" data-saveperformance="off">
+                        <img src="{{ it.slider_foto.url }}" alt="slider" data-bgposition="center center"
+                             data-bgfit="cover" data-bgrepeat="no-repeat">
+                        <div class="tp-caption sfb tp-resizeme"
+                             data-x="center" data-hoffset="0"
+                             data-y="center" data-voffset="-90"
+                             data-speed="500"
+                             data-start="800"
+                             data-easing="Power3.easeInOut"
+                             data-splitin="none"
+                             data-splitout="none"
+                             data-elementdelay="0.06"
+                             data-endelementdelay="0.1"
+                             data-endspeed="300"
+                             style="z-index: 5; font-weight:bold; font-size:56px; color:#000;">
+                            {{ it.slider_title_1 }}
+                        </div>
+                        <div class="tp-caption sfb tp-resizeme"
+                             data-x="center" data-hoffset="0"
+                             data-y="center" data-voffset="-30"
+                             data-speed="500"
+                             data-start="1200"
+                             data-easing="Power3.easeInOut"
+                             data-splitin="none"
+                             data-splitout="none"
+                             data-elementdelay="0.07"
+                             data-endelementdelay="0.1"
+                             data-endspeed="300"
+                             style="z-index: 6; font-weight:bold; max-width: auto; font-size:36px; color:#000;">
+                            {{ it.slider_title_2 }}
+                        </div>
+                        <div class="tp-caption font-crimson font-italic sfb tp-resizeme"
+                             data-x="center" data-hoffset="0"
+                             data-y="center" data-voffset="20"
+                             data-speed="500"
+                             data-start="1600"
+                             data-easing="Power3.easeInOut"
+                             data-splitin="none"
+                             data-splitout="none"
+                             data-elementdelay="0.1"
+                             data-endelementdelay="0.1"
+                             data-endspeed="300"
+                             style="z-index: 7; font-size:16px; color:#000; max-width: auto; max-height: auto; white-space: nowrap;">
+                            {{ it.slider_title_3 }}
+                        </div>
+                        <div class="tp-caption sfb tp-resizeme"
+                             data-x="center" data-hoffset="0"
+                             data-y="center" data-voffset="100"
+                             data-speed="500"
+                             data-start="2000"
+                             data-easing="Power3.easeInOut"
+                             data-splitin="none"
+                             data-splitout="none"
+                             data-elementdelay="0.1"
+                             data-endelementdelay="0.1"
+                             data-endspeed="300"
+                             style="z-index: 7; font-size:16px; color:#000; max-width: auto; max-height: auto; white-space: nowrap;">
+                            <a href="{{ it.slider_link }}" class="btn">{{ it.slider_link_text }}</a></div>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</section>
