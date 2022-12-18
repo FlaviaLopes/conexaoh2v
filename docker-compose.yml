@@ -1,0 +1,23 @@
+version: '3'
+services:
+  django:
+    build: .
+    restart: unless-stopped
+    ports:
+      - "8000:8000"
+    depends_on:
+      - mysql
+    environment:
+      MYSQL_HOST: mysql
+      MYSQL_PASSWORD: nkEkKcct8BgC
+    volumes:
+      - .:/app
+      - /app/db
+  mysql:
+    image: mysql
+    restart: unless-stopped
+    environment:
+      MYSQL_DATABASE: conexaoh2v
+      MYSQL_ROOT_PASSWORD: nkEkKcct8BgC
+    volumes:
+      - ./db:/var/lib/mysql
