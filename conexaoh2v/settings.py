@@ -7,7 +7,7 @@ SECRET_KEY = get_random_secret_key()
 
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost']
 
 # Application definition
 INSTALLED_APPS = [
@@ -53,11 +53,11 @@ WSGI_APPLICATION = 'conexaoh2v.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'conexaoh2v',
-        'HOST': 'localhost',
-        'PORT': '3306',
-        'USER': 'root',
-        'PASSWORD': 'nkEkKcct8BgC'
+        'NAME': os.getenv('MYSQL_DATABASE', 'conexaoh2v'),
+        'HOST': os.getenv('MYSQL_HOST', 'localhost'),
+        'PORT': os.getenv('MYSQL_PORT', '3306'),
+        'USER': os.getenv('MYSQL_USER', 'root'),
+        'PASSWORD': os.getenv('MYSQL_PASSWORD', 'nkEkKcct8BgC')
     }
 }
 

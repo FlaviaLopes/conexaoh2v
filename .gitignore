@@ -1,5 +1,6 @@
 /env/
 .idea/
+db
 db.sqlite3
 conexaoh2v/__pycache__/
 landing/__pycache__/
