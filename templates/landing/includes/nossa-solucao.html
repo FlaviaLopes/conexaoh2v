@@ -17,44 +17,12 @@
                     <li class="col-sm-4"><i class="{{ it.class_icon }} animate fadeInUp" data-wow-delay="0.4s"></i>
                         <h6>{{ it.title }}</h6>
                         <p>{{ it.text }}</p>
+                        {% if it.link %}
+                            <a class="btn animate fadeInUp" data-wow-delay="0.4s"
+                               href="{{ it.link }}">{{ it.text_link }}</a>
+                        {% endif %}
                     </li>
                 {% endfor %}
-                {% comment %}
-                <!-- Unlimited Features -->
-                <li class="col-sm-4"><i class="flaticon-connection animate fadeInUp" data-wow-delay="0.6s"></i>
-                    <h6>Digital Marketing</h6>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
-                        has been indust.</p>
-                </li>
-
-                <!-- Ultra Responsive -->
-                <li class="col-sm-4"><i class="flaticon-cogwheel-1 animate fadeInUp" data-wow-delay="0.4s"></i>
-                    <h6>Web Develpment</h6>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
-                        has been indust.</p>
-                </li>
-
-                <!-- Discuss Idea -->
-                <li class="col-sm-4"><i class="flaticon-android animate fadeInUp" data-wow-delay="0.6s"></i>
-                    <h6>Mobile Applications</h6>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
-                        has been indust.</p>
-                </li>
-
-                <!-- Discuss Idea -->
-                <li class="col-sm-4"><i class="flaticon-technology-2 animate fadeInUp"
-                                        data-wow-delay="0.6s"></i>
-                    <h6>Photography</h6>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
-                        has been indust.</p>
-                </li>
-
-                <!-- Discuss Idea -->
-                <li class="col-sm-4"><i class="flaticon-search animate fadeInUp" data-wow-delay="0.6s"></i>
-                    <h6>Digital Art</h6>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
-                        has been indust.</p>
-                </li>{% endcomment %}
             </ul>
         </div>
     </div>

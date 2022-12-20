@@ -5,18 +5,25 @@ from datetime import date
 
 def index(request):
     tags = HeadTag.objects.first()
+
     header = Header.objects.first()
-    sliders = Slider.objects.all()
+    sliders = header.slides.all()
+
     socials = Social.objects.all()
     nmvv = NMVV.objects.first()
     stats = Statistic.objects.all()
-    services = Service.objects.all()
-    about_services = AboutService.objects.first()
+
+    about_services = Service.objects.first()
+    services = about_services.services.all()
+
     faca_parte = FacaParte.objects.first()
-    about_team = AboutTeam.objects.first()
-    team = Team.objects.all()
-    about_partner = AboutPartner.objects.first()
-    partners = Partner.objects.all()
+
+    about_team = Team.objects.first()
+    team = about_team.team.all()
+
+    about_partner = Partner.objects.first()
+    partners = about_partner.partners.all()
+
     footer = Footer.objects.first()
     # social_networks = {}
     # for it in socials:

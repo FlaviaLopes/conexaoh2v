@@ -12,6 +12,7 @@ ALLOWED_HOSTS = ['localhost']
 # Application definition
 INSTALLED_APPS = [
     'landing.apps.LandingConfig',
+    'djangocms_admin_style',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

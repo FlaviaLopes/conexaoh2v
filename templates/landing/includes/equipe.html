@@ -13,14 +13,13 @@
         <!-- Team  -->
         <div class="team-part">
             <div class="row">
-
                 <!-- Team Member -->
                 {% for it in team %}
                     <div class="col-sm-4">
                         <article>
                             <!-- Team Img -->
-                            <div class="team-img animate"><img class="img-responsive" src="{{ it.photo.url }}" alt="">
-
+                            <div class="team-img animate">
+                                <img class="img-responsive" src="{{ it.photo.url }}" alt="">
                                 <!-- Social -->
                                 {% if it.instagram_link or it.linkedin_link %}
                                     <div class="team-hover">
@@ -42,8 +41,12 @@
                                 </div>
                         </article>
                     </div>
+                    {% if forloop.counter == 3 %}
+                        </div>
+                        <div class="row">
+                    {% endif %}
                 {% endfor %}
-            </div>
+                </div>
         </div>
     </div>
 </section>
