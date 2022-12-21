@@ -7,10 +7,9 @@ SECRET_KEY = get_random_secret_key()
 
 DEBUG = False
 
-ALLOWED_HOSTS = ['localhost']
+ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', 'localhost').split(',')
 
-CSRF_TRUSTED_ORIGINS = ['https://conexaoh2v.boragora.app']
-
+CSRF_TRUSTED_ORIGINS = os.getenv('CSRF_TRUSTED_ORIGINS', '').split(',')
 # Application definition
 INSTALLED_APPS = [
     'landing.apps.LandingConfig',
