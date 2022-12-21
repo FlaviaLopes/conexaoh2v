@@ -5,9 +5,11 @@ import os
 BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = get_random_secret_key()
 
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['localhost']
+
+CSRF_TRUSTED_ORIGINS = ['https://conexaoh2v.boragora.app']
 
 # Application definition
 INSTALLED_APPS = [
