@@ -24,22 +24,8 @@ def index(request):
     about_partner = Partner.objects.first()
     partners = about_partner.partners.all()
 
+    social = Social.objects.all()
     footer = Footer.objects.first()
-    # social_networks = {}
-    # for it in socials:
-    #     social_networks.update({it.social_network_name: it.social_network_link})
-    # del socials
-
-    # socials = ShareOn.objects.all()
-    # share_on = {}
-    # for it in socials:
-    #     share_on.update({it.social_network_name: it.social_network_link})
-    # del socials
-    #
-    # about = About.objects.order_by('created_date')[0]
-    #
-    # projects = Project.objects.order_by('created_date')
-    #
     current_year = date.today().year
 
     return render(request, 'landing/base.html', locals())
