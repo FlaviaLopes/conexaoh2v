@@ -10,7 +10,17 @@
         <div class="intro-small col-md-10 center-auto">
             <p>{{ nmvv.business_text }}</p>
         </div>
-        <div class="row">
+        <div class="share-box text-center clearfix">
+            <section>
+                {% for it in social %}
+                    <a href="{{ it.social_network_link }}" target="_blank" title="Conecte-se pelo {{ it.social_network_name|title }}">
+                        <i class="fa fa-{{ it.social_network_name }}"></i>
+                    </a>
+                {% endfor %}
+            </section>
+            <div style="clear:both"></div>
+        </div>
+       {% comment %} <div class="row">
             <div class="col-sm-4">
                 <article><i class="flaticon-light-bulb animate fadeInLeft" data-wow-delay="0.4s"></i>
                     <h3>{{ nmvv.mission_title }}</h3>
@@ -29,6 +39,6 @@
                     <p>{{ nmvv.values_text }}</p>
                     <a href="{{ nmvv.values_link }}">{{ nmvv.values_text_link }}</a></article>
             </div>
-        </div>
+        </div>{% endcomment %}
     </div>
 </section>

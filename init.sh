@@ -3,6 +3,7 @@
 echo -e "\n - Apply database migrations"
 docker compose exec django python manage.py makemigrations
 docker compose exec django python manage.py migrate
+#docker compose exec django python manage.py collectstatic
 
 echo -e "\n - Restore database"
 docker compose cp conexaoh2v.sql mysql:/dump.sql

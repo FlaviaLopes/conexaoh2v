@@ -5,11 +5,11 @@ import os
 BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = get_random_secret_key()
 
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', 'localhost').split(',')
 
-CSRF_TRUSTED_ORIGINS = os.getenv('CSRF_TRUSTED_ORIGINS', '').split(',')
+#CSRF_TRUSTED_ORIGINS = os.getenv('CSRF_TRUSTED_ORIGINS', '').split(',')
 # Application definition
 INSTALLED_APPS = [
     'landing.apps.LandingConfig',
@@ -87,8 +87,11 @@ USE_I18N = True
 USE_TZ = True
 
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'landing/static')
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+# STATIC_ROOT = "/var/www/example.com/static/"
+
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+# MEDIA_ROOT = "/var/www/example.com/media/"
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
